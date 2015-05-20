@@ -3,7 +3,7 @@ package estudo.abstractFactory;
 /**
  * Created by ton on 20/05/15.
  */
-public class WolksVagemFactory implements FabricaDeCarros {
+public class WolksVagemFactory implements IFabricaDeCarros {
     @Override
     public CarroSedan createCarroSedan() {
         return new Jeta();

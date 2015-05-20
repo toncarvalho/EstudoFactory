@@ -3,9 +3,22 @@ package estudo.abstractFactory;
 /**
  * Created by ton on 20/05/15.
  */
-public interface FabricaDeCarros {
+public class FabricaDeCarros {
 
-    CarroSedan createCarroSedan();
-    CarroPopular createCarroPopular();
 
+    public static IFabricaDeCarros getFactory(CarFactoryes factoryes) {
+
+        switch (factoryes) {
+            case Fiat: {
+                return new FiatFactory();
+            }
+            case WolksVagem: {
+                return new WolksVagemFactory();
+            }
+            default: {
+                return null;
+            }
+        }
+
+    }
 }
